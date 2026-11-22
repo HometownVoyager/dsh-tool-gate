@@ -1,0 +1,8 @@
+# dsh-tool-gate bundle 层：把工具闸门挂进引导列表（宿主级，先于任何 agent 创建）。
+# 插件行按包名引用，Node 模块解析经 profile 的 node_modules junction 找到本包。
+# 配置省略时走插件 Config 的缺省值：allowPresets=[cordis, prompt-writing]、
+# gateTools=super-injector 的 18 个 dev_* 开发工具、dryRun=false。
+- insert:
+    - id: dsh-tool-gate
+      name: '@dsh-external/dsh-tool-gate'
+      config: {}
